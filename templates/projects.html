@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% load static %}
+{% block projectactive %}active{% endblock projectactive %}
+{% block title %} Projects {% endblock title %}
+{% block body %}
+  <div class="container mt-2">
+    <h2 class="text-center  my-3 pt-3">My Projects</h2>
+    <div class="row">
+      <div class="col md-3">
+        <div class="card" style="width: 18rem;">
+          <img src="https://source.unsplash.com/1000x600/?code,aws" class="card-img-top" alt="...">
+          <div class="card-body text-light bg-dark">
+            <h5 class="card-title">Developer</h5>
+            <p class="card-text">Developing my portfolio using Django high-level Python web framework</p>
+            <a href="#" class="btn btn-primary">Click here</a>
+          </div>
+        </div>
+      </div>
+      <div class="col md-3">
+        <div class="card" style="width: 18rem;">
+          <img src="https://source.unsplash.com/1000x600/?website,design" class="card-img-top" alt="...">
+          <div class="card-body text-light bg-dark">
+            <h5 class="card-title">Designer</h5>
+            <p class="card-text">Creating website using wordpress framework and Hosting using Amazon Web Services (AWS).</p>
+            <a href="https://blackteacorner.com/" class="btn btn-primary">Now on live</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+      {% csrf_token %}
+    <h1 class="my-3 pt-3">My Videos</h1>
+    <div class="row">
+        <div class="col md-3">
+        <div class="ratio ratio-21x9"><iframe class="embed-responsive-item" src="/static/website.mp4"
+        allowfullscreen></iframe>
+       </div>       
+        <h6 class="my-1 pt-1">Website-Domine-Hosting-AWS</h6>
+        <p>I create this website using wordpress and I using Amazon Web Services (AWS) for hosting purpose  </p>     
+       <br>
+       <br>
+       <div class="col md-3">
+        <div class="ratio ratio-21x9"><iframe class="embed-responsive-item" src="/static/Quiz.mp4"
+        allowfullscreen></iframe>
+       </div>
+       <h6 class="my-1 pt-1">Python-Quiz</h6>
+       <p>Quiz game using python Executable file (.exe)</p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+ 
+ 
+
+{% endblock body %}
